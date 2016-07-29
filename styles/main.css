@@ -1,0 +1,261 @@
+main {
+  height: 320vh;
+  width: 100vw;
+}
+
+.main-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #DCDFE4;
+  height: 230vh;
+  width: 100vw;
+}
+
+.welcome-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Josefin Sans;
+  font-weight: 600;
+  font-size: 60px;
+  color: #242424;
+  height: 70vh;
+  width: 100vw;
+}
+
+.welcome-text h1 {
+  text-align: center;
+}
+
+.main-section-middle {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-section-middle-left {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.main-section-middle-left-img {
+  width: 400px;
+  min-height: 800px;
+  max-height: 800px;
+  z-index: 100;
+}
+
+.iphone-view {
+  min-height: 561px;
+  height: 565px;
+  width: 326px;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  border-color: #242424;
+  z-index: 200;
+  margin-left: -364px;
+  margin-top: 80px;
+}
+
+.map-view {
+  width: 100%;
+  height: 80%;
+  background-image: url('../img/iphone_map.jpg');
+  cursor: crosshair;
+  position: relative;
+}
+
+.score-top {
+  width: 100%;
+  height: 10%;
+  background-color: #4F5D73;
+  border-bottom: 1px solid #242424;
+  display: flex;
+  justify-content: space-between;
+}
+
+.score-top div {
+  height: 100%;
+  color: #fff;
+  font-size: 12px;
+  font-family: Josefin Sans;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bigNum {
+  font-size: 25px;
+}
+
+.bigCol {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.score-top-div {
+  width: 45%;
+}
+
+.score-top-div img {
+  height: 50px;
+  width: 50px;
+}
+
+.menu-bottom {
+  width: 100%;
+  height: 10%;
+  background-color: #EEEEEE;
+  border-top: 1px solid #242424;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu-bottom img {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.container {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+}
+
+.pulse-ring {
+  content: '';
+  width: 100px;
+  height: 100px;
+  border: 10px solid #b20000;
+  border-radius: 50%;
+  animation: pulsate infinite 2s;
+  left: -35px;
+  top: -71px;
+  position: relative;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(.4, .4);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+.planted-bomb {
+  height: 40px;
+  width: 40px;
+  z-index: 400;
+}
+
+.main-section-middle-right {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.main-section-bottom {
+  height: 60vh;
+  width: 100vw;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: flex-end;
+  z-index: 0;
+}
+
+.app-info {
+  width: 100%;
+  height: 60%;
+  font-family: Verdana;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-info img {
+  width: 300px;
+  height: 90px;
+}
+
+.app-info p {
+  font-size: 8px;
+  color: #C4C8CF;
+}
+
+.walkingMan {
+  height: 40px;
+  width: 40px;
+  transition: top 2500ms, left 2500ms;
+  transition-timing-function: linear;
+  z-index: 500;
+  position: relative;
+}
+
+.quotes-section {
+  padding: 60px;
+  min-height: 10vh;
+  width: 100vw;
+  background-color: #DCDFE4;
+  font-family: Lobster Two;
+  font-size: 20px;
+  color: #4F5D73;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  margin: 1rem;
+  width: 30%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  padding: 30px;
+  border-radius: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: darkgray;
+  min-height: 30%;
+  line-height: 1.5;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.signature {
+  position: absolute;
+  bottom: 10%;
+  left: 70%;
+  color: #b20000;
+}
+
+.footer {
+  height: 60vh;
+  width: 100vw;
+  background-color: #4F5D73;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  height: 100px;
+  width: 100px;
+}

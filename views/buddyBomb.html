@@ -1,0 +1,26 @@
+<section class="score-top">
+  <div class="score-top-div">
+    <div><img src="../img/thin line ui icons 170/png/103__user-white.png"><p>Jonah</p></div>
+    <span class="bigNum">{{score}}</span>
+  </div>
+  <div><span class="bigCol">:</span></div>
+  <div class="score-top-div">
+    <span class="bigNum">0</span>
+    <div><p>Ash</p><img src="../img/thin line ui icons 170/png/103__user-white.png"></div>
+  </div>
+</section>
+
+<section ng-click="plantBomb($event)" class="map-view" ng-style="{'background-image':'url(' + mapImage + ')'}">
+  <img class="walkingMan" ng-style="pos" ng-src={{img}}>
+  <div ng-click="bombClick()" class="container" ng-style="location" ng-show="show === true">
+    <img src="../img/bomb-professional-cursor.png" class="planted-bomb">
+    <div class="pulse-ring"></div>
+  </div>
+
+</section>
+
+<section class="menu-bottom">
+  <img src="../img/thin line ui icons 170/png/101__home.png">
+  <img src="../img/thin line ui icons 170/png/112__cart.png">
+  <img ng-click="changeWalk()" src="../img/thin line ui icons 170/png/082__setting_cog.png">
+</section>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+
+<head>
+  <meta charset="utf-8">
+
+    <title>BuddyBomb</title>
+
+<link rel="stylesheet" href="styles/tabs.css">
+<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/reset.css">
+<link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:100' rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-controller="mainCtrl">
+
+<main>
+
+  <section class="main-section">
+      <div class="welcome-text"><h1>Oh #!@$,<br><br>I've been BuddyBombed...</h1></div>
+
+      <div class="main-section-middle">
+          <div class="main-section-middle-left">
+              <img class="main-section-middle-left-img" src="img/iphone.png">
+              <buddy-bomb class="iphone-view"></buddy-bomb>
+          </div>
+          <div class="main-section-middle-right">
+              <div class="tab-section">
+
+                <div ng-class="tabs1">
+                  <label ng-click="changeClass('tabs1')" class="tabs-label" ui-sref="welcome">Welcome</label>
+                </div>
+                <div ng-class="tabs2">
+                  <label ng-click="changeClass('tabs2')" class="tabs-label" ui-sref="howtoplay">How To Play</label>
+                </div>
+                <div ng-class="tabs3">
+                  <label ng-click="changeClass('tabs3')" class="tabs-label" ui-sref="about">Contact</label>
+                </div>
+
+                <section class="paragraph-section">
+                  <ui-view></ui-view>
+                </section>
+
+              </div>
+          </div>
+      </div>
+
+      <div class="main-section-bottom">
+          <div class="app-info">
+            <h3>BuddyBomb is a mobile game available for iPhone and iPad</h3>
+            <img src="img/app_store.png">
+            <p>Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
+          </div>
+      </div>
+  </section>
+
+  <section class="quotes-section">
+      <div class="card" ng-repeat="quote in quotes">
+          <h2>"{{quote.quote}}"</h2><br>
+          <p class="signature">--{{quote.person}}</p><br>
+      </div>
+  </section>
+
+  <section class="footer">
+      <img src="img/bomb-professional-white.png">
+  </section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/iphone_game.js"></script>
+<script src="js/mainCtrl.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/mainSrv.js"></script>
+</body>
+
+</html>
